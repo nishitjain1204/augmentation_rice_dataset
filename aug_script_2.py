@@ -43,7 +43,7 @@ for folder in my_folders:
     num_of_images = batch_size * num_of_count
 
     count = 1
-    for batch in datagen.flow(x, batch_size=10, save_to_dir='augmented_images'+'/'+folder,
+    for batch in datagen.flow(x, batch_size=batch_size, save_to_dir='augmented_images'+'/'+folder,
                             save_prefix='aug', save_format='jpg'):
         count += 1    
         if count > num_of_count:
